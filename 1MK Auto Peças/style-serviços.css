@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #2c3e50;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.nav .btn-contato {
+  background-color: #e74c3c;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.titulo-principal {
+  background-color: #2980b9;
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+.titulo-principal h1 {
+  font-size: 36px;
+}
+
+.titulo-principal p {
+  font-size: 20px;
+}
+
+.titulo-principal .btn-contato-title {
+  background-color: #e74c3c;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.section-servicos {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  background-color: #ecf0f1;
+  padding: 20px;
+  width: 30%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.titulo-servico {
+  font-size: 20px;
+  color: #333;
+}
+
+.espacos-para-produtos {
+  background-color: #bdc3c7;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.precos {
+  background-color: #16a085;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.rodape-geral {
+  background-color: #2c3e50;
+  padding: 30px 20px;
+  color: white;
+}
+
+.rodape-geral .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rodape-geral .col-md-4 {
+  width: 30%;
+}
+
+.rodape-geral .icones-sociais a {
+  color: white;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.direitos-autorais {
+  text-align: center;
+  margin-top: 20px;
+}

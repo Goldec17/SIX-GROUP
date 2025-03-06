@@ -1,0 +1,262 @@
+/* Importa a fonte Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Reset e configurações básicas */
+* {
+  margin: 0; /* Remove as margens padrão de todos os elementos */
+  padding: 0; /* Remove o padding padrão de todos os elementos */
+  box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura */
+}
+html {
+  font-size: 16px; /* Define o tamanho da fonte base */
+}
+body {
+  font-family: 'Inter', sans-serif; /* Define a fonte do corpo */
+  background-color: #f4f4f4; /* Define a cor de fundo do corpo */
+  color: #333; /* Define a cor do texto */
+  line-height: 1.6; /* Define o espaçamento entre as linhas de texto */
+}
+
+/* Cabeçalho */
+.header {
+  background: #fff; /* Define o fundo branco para o cabeçalho */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil ao cabeçalho */
+  padding: 1rem 0; /* Define o padding no cabeçalho */
+  position: relative; /* Define a posição relativa para o cabeçalho */
+  z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+.header .container {
+  max-width: 1200px; /* Define o limite máximo de largura para o container */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding: 0 2%; /* Adiciona padding lateral ao container */
+  display: flex; /* Define o layout como flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui os itens com espaçamento entre eles */
+}
+.header .logo {
+  max-width: 250px; /* Define a largura máxima para o logo */
+}
+nav ul.ul {
+  display: flex; /* Exibe os itens de navegação em linha */
+  list-style: none; /* Remove a numeração ou pontos da lista */
+  gap: 2rem; /* Adiciona um espaço de 2rem entre os itens da lista */
+}
+nav ul.ul li {
+  display: inline-block; /* Exibe cada item da lista como bloco em linha */
+}
+nav ul.ul li a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #333; /* Define a cor do texto do link */
+  font-weight: 600; /* Define a espessura da fonte para o link */
+  transition: color 0.3s; /* Cria um efeito de transição na cor */
+}
+nav ul.ul li a:hover {
+  color: #4f9cf9; /* Define a cor ao passar o mouse sobre o link */
+}
+.btn-contato {
+  background-color: #4f9cf9; /* Define o fundo azul para o botão */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 0.5rem 1rem; /* Adiciona padding ao botão */
+  border: none; /* Remove a borda do botão */
+  border-radius: 5px; /* Define bordas arredondadas */
+  text-transform: uppercase; /* Converte o texto para maiúsculas */
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s; /* Cria um efeito de transição no fundo */
+}
+.btn-contato:hover {
+  background-color: #357ac9; /* Define a cor de fundo ao passar o mouse */
+}
+
+/* Fundo do cabeçalho (opcional: insira sua imagem desejada) */
+.background {
+  background: url('assets/banner-carrinho.jpg') no-repeat center center/cover; /* Adiciona uma imagem de fundo */
+  height: 300px; /* Define a altura da imagem de fundo */
+  position: relative; /* Define a posição relativa para o fundo */
+}
+.background::after {
+  content: ""; /* Cria um pseudo-elemento vazio */
+  position: absolute; /* Define a posição absoluta do pseudo-elemento */
+  top:0; /* Alinha o pseudo-elemento ao topo */
+  left:0; /* Alinha o pseudo-elemento à esquerda */
+  width:100%; /* Define a largura do pseudo-elemento */
+  height:100%; /* Define a altura do pseudo-elemento */
+  background: rgba(0,0,0,0.4); /* Adiciona uma sobreposição preta translúcida */
+}
+
+/* Seção do Carrinho */
+.carrinho-container {
+  max-width: 1200px; /* Define o limite máximo de largura para o container */
+  margin: 2rem auto; /* Centraliza o container com margens */
+  padding: 2rem; /* Adiciona padding ao container */
+  background: #fff; /* Define o fundo branco para o container */
+  border-radius: 10px; /* Arredonda os cantos do container */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma sombra ao redor do container */
+}
+.carrinho-container h1 {
+  text-align: center; /* Alinha o título ao centro */
+  margin-bottom: 2rem; /* Adiciona margens abaixo do título */
+  color: #333; /* Define a cor do título */
+}
+
+/* Produtos no carrinho */
+.carrinho-produtos {
+  display: flex; /* Exibe os produtos em um layout flexbox */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  gap: 1.5rem; /* Adiciona um espaço de 1.5rem entre os produtos */
+  margin-bottom: 2rem; /* Adiciona margens abaixo da lista de produtos */
+}
+.produto {
+  display: flex; /* Exibe cada produto em um layout flexbox */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  padding: 1rem; /* Adiciona padding ao produto */
+  border-bottom: 1px solid #e0e0e0; /* Adiciona uma borda inferior aos produtos */
+}
+.produto img {
+  width: 100px; /* Define a largura da imagem */
+  height: 100px; /* Define a altura da imagem */
+  object-fit: cover; /* Faz a imagem cobrir a área disponível sem distorção */
+  border-radius: 8px; /* Arredonda os cantos da imagem */
+  margin-right: 1rem; /* Adiciona margens à direita da imagem */
+}
+.produto-info {
+  flex: 2; /* Define que a seção de informações ocupará o dobro de espaço */
+}
+.produto-info .nome-produto {
+  font-size: 1.2rem; /* Define o tamanho da fonte do nome do produto */
+  font-weight: 600; /* Define a espessura da fonte do nome do produto */
+  margin-bottom: 0.5rem; /* Adiciona margens abaixo do nome do produto */
+}
+.produto-info .preco-produto {
+  color: #4f9cf9; /* Define a cor do preço como azul */
+  font-weight: 700; /* Define a espessura da fonte do preço */
+}
+.produto-acao {
+  display: flex; /* Exibe as ações em um layout flexbox */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 1rem; /* Adiciona um espaço de 1rem entre os itens */
+}
+.quantidade {
+  width: 60px; /* Define a largura do campo de quantidade */
+  padding: 0.5rem; /* Adiciona padding ao campo de quantidade */
+  border: 1px solid #ccc; /* Define uma borda cinza ao redor do campo */
+  border-radius: 5px; /* Arredonda os cantos do campo */
+}
+.remover {
+  background-color: #e74c3c; /* Define o fundo vermelho para o botão de remover */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda do botão */
+  padding: 0.5rem 1rem; /* Adiciona padding ao botão */
+  border-radius: 5px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s; /* Cria um efeito de transição no fundo */
+}
+.remover:hover {
+  background-color: #c0392b; /* Define a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Resumo da compra */
+.resumo-compra {
+  display: flex; /* Exibe os itens de resumo em um layout flexbox */
+  justify-content: space-between; /* Distribui os itens com espaçamento */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  padding-top: 1rem; /* Adiciona padding no topo da seção */
+  border-top: 2px solid #e0e0e0; /* Adiciona uma borda superior */
+}
+.resumo-compra h2 {
+  font-size: 1.5rem; /* Define o tamanho da fonte para o título do resumo */
+  color: #333; /* Define a cor do título */
+}
+#finalizar-compra {
+  background-color: #4f9cf9; /* Define o fundo azul para o botão de finalizar */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 0.75rem 1.5rem; /* Adiciona padding ao botão */
+  border: none; /* Remove a borda do botão */
+  border-radius: 5px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+  font-size: 1rem; /* Define o tamanho da fonte do botão */
+  transition: background-color 0.3s; /* Cria um efeito de transição no fundo */
+}
+#finalizar-compra:hover {
+  background-color: #357ac9; /* Define a cor de fundo ao passar o mouse */
+}
+
+/* Modal de pagamento */
+.pagamento-container {
+  position: fixed; /* Define a posição fixa do modal */
+  top: 0; /* Alinha o modal ao topo da tela */
+  left: 0; /* Alinha o modal à esquerda da tela */
+  width: 100%; /* Define a largura do modal como 100% */
+  height: 100%; /* Define a altura do modal como 100% */
+  background: rgba(0,0,0,0.6); /* Adiciona um fundo translúcido preto */
+  display: none; /* Esconde o modal por padrão */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  justify-content: center; /* Alinha os itens ao centro horizontalmente */
+  z-index: 200; /* Garante que o modal fique acima de outros elementos */
+}
+.pagamento-container.active {
+  display: flex; /* Exibe o modal quando a classe 'active' for adicionada */
+}
+.modal-conteudo {
+  background: #fff; /* Define o fundo branco para o modal */
+  padding: 2rem; /* Adiciona padding ao modal */
+  border-radius: 10px; /* Arredonda os cantos do modal */
+  max-width: 500px; /* Define a largura máxima do modal */
+  width: 90%; /* Define a largura do modal como 90% */
+  text-align: center; /* Centraliza o texto dentro do modal */
+}
+.modal-conteudo h2 {
+  margin-bottom: 1.5rem; /* Adiciona margens abaixo do título do modal */
+  color: #333; /* Define a cor do título */
+}
+.metodos {
+  display: flex; /* Exibe os métodos de pagamento em flexbox */
+  gap: 1rem; /* Adiciona um espaço de 1rem entre os itens */
+  justify-content: center; /* Centraliza os itens */
+  margin-bottom: 1.5rem; /* Adiciona margens abaixo dos métodos */
+}
+.metodo-pagamento {
+  background-color: #4f9cf9; /* Define o fundo azul para os métodos de pagamento */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda dos botões */
+  padding: 0.75rem 1.5rem; /* Adiciona padding ao botão */
+  border-radius: 5px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s; /* Cria um efeito de transição no fundo */
+}
+.metodo-pagamento:hover {
+  background-color: #357ac9; /* Define a cor de fundo ao passar o mouse */
+}
+.fechar-modal {
+  background: #e74c3c; /* Define o fundo vermelho para o botão de fechar */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda do botão */
+  padding: 0.5rem 1rem; /* Adiciona padding ao botão */
+  border-radius: 5px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse */
+  transition: background-color 0.3s; /* Cria um efeito de transição no fundo */
+}
+.fechar-modal:hover {
+  background-color: #c0392b; /* Define a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Rodapé */
+.rodape-geral {
+  background-color: #4f9cf9; /* Define o fundo azul para o rodapé */
+  color: #fff; /* Define a cor do texto como branco */
+  padding: 1rem 0; /* Adiciona padding ao rodapé */
+  margin-top: 2rem; /* Adiciona margem superior ao rodapé */
+}
+.rodape-geral .container {
+  max-width: 1200px; /* Define a largura máxima para o container do rodapé */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding: 0 2%; /* Adiciona padding lateral ao container */
+  display: flex; /* Exibe os itens de rodapé em flexbox */
+  flex-wrap: wrap; /* Permite quebra de linha quando necessário */
+  justify-content: space-between; /* Distribui os itens com espaçamento */
+}
+.rodape-geral .row {
+  display: flex; /* Exibe os itens da linha em flexbox */
+  width: 100%; /* Define a largura da linha como 100% */
+  justify-content: space-between; /* Distribui os itens com espaçamento */
+  margin-bottom: 1rem; /* Ad*/
+}
